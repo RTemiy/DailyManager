@@ -1,0 +1,92 @@
+*{
+    overflow: auto;
+}
+
+mf {
+    display:block;
+    border-style: inset;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: white;
+    height: 920px;
+    width: 400px
+}
+toolbar {
+    border-style: inset;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: white;
+    display: inline-table;
+    width: 400px;
+}
+toolbar>* {
+    display: inline-table;
+    border-style: inset;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: white;
+    height: 15px;
+    width: 15px;
+}
+
+categories{
+    height: 15px;
+    width: 400px;
+}
+
+categories>* {
+    margin-top: 5px;
+    display: inline-table;
+    border-style: inset;
+    border-radius: 5px;
+    border-width: 1px;
+    border-bottom: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-color: white;
+    height: 15px;
+    width: 98px
+}
+
+catF {
+   
+    height: 500px;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: black;
+    color: whitesmoke;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+event {
+    display: table;
+    border-style: inset;
+    width: 397px;
+    height: 15px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-color: white;
+}
+
+NewWindow {
+    position: absolute;
+    border-style: inset;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: white;
+    top:50px;
+    left: 50px;
+    height: 400px;
+    width: 250px;
+    background-color: black;
+}
