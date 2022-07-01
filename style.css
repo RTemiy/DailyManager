@@ -1,60 +1,5 @@
-*{
-    overflow:hidden;
-}
-
-mf {
-    display:block;
-    border-style: inset;
-    border-radius: 5px;
-    border-width: 1px;
-    border-color: #262626;
-    height: 500px;
-    width: 400px
-}
-toolbar {
-    display: inline-table;
-    width: 400px;
-    border-width: 0px;
-    border-bottom-color: #262626;
-    border-bottom-width: 1px;
-    border-style: inset;
-}
-toolbar>* {
-    display: inline-table;
-    background-color: #262626;
-    height: 45px;
-    width: 45px;
-    font-size: 225%;
-    text-align: center;
-}
-
-categories{
-    margin-top: 5px;
-    width: 395px;
-    display: inline-block;
-    white-space:nowrap;
-    overflow-y: hidden;
-    overflow-x: unset;
-}
-
-categories>* {    
-    margin-right: 2px;
-    display: inline-block;
-    overflow:hidden;
-    border-radius: 5px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-style: none;
-    border-right-style: outset;
-    border-width: 1px;
-    border-color: #979797;
-    height: 25px;
-    min-width: 98px;
-    font-size: 150%;
-    text-align:center;
-    font-weight: bold;
-    background-color: #111111;
-
+* {
+    overflow: hidden;
 }
 
 body {
@@ -70,14 +15,75 @@ body {
 
 }
 
+p {
+    margin: 1px;
+}
+
+mf {
+    display: block;
+    border-style: inset;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #262626;
+    height: 500px;
+    width: 400px
+}
+
+toolbar {
+    display: inline-table;
+    width: 400px;
+    border-width: 0px;
+    border-bottom-color: #262626;
+    border-bottom-width: 1px;
+    border-style: inset;
+}
+
+toolbar>* {
+    display: inline-table;
+    background-color: #262626;
+    height: 45px;
+    width: 45px;
+    font-size: 225%;
+    text-align: center;
+}
+
+categories {
+    margin-top: 5px;
+    width: 395px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: unset;
+}
+
+categories>* {
+    margin-right: 2px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-style: none;
+    border-right-style: outset;
+    border-width: 1px;
+    border-color: #979797;
+    height: 25px;
+    min-width: 98px;
+    font-size: 150%;
+    text-align: center;
+    font-weight: bold;
+    background-color: #111111;
+
+}
+
 event {
     margin-top: 2px;
     display: table;
-    border-style:none;
+    border-style: none;
     width: 397px;
     height: 15px;
     border-width: 1px;
-    border-top-style:outset;
+    border-top-style: outset;
     border-color: #303030;
     background-color: rgb(10, 10, 10);
     font-size: 125%;
@@ -89,9 +95,9 @@ NewWindow {
     border-radius: 5px;
     border-width: 1px;
     border-color: white;
-    top:50px;
+    top: 58px;
     left: 50px;
-    height: 400px;
+    height: 300px;
     width: 250px;
     background-color: black;
     font-size: 125%;
