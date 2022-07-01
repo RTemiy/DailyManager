@@ -7,50 +7,53 @@ mf {
     border-style: inset;
     border-radius: 5px;
     border-width: 1px;
-    border-color: white;
+    border-color: #262626;
     height: 500px;
     width: 400px
 }
 toolbar {
-    border-style: inset;
-    border-radius: 5px;
-    border-width: 1px;
-    border-color: white;
     display: inline-table;
     width: 400px;
+    border-width: 0px;
+    border-bottom-color: #262626;
+    border-bottom-width: 1px;
+    border-style: inset;
 }
 toolbar>* {
     display: inline-table;
-    border-style: inset;
-    border-radius: 5px;
-    border-width: 1px;
-    border-color: white;
-    height: 15px;
-    width: 15px;
+    background-color: #262626;
+    height: 40px;
+    width: 40px;
+    font-size: 150%;
+    text-align: center;
 }
 
 categories{
-    height: 15px;
-    width: 400px;
-}
-
-categories>* {
     margin-top: 5px;
-    display: inline-table;
-    border-style: inset;
-    border-radius: 5px;
-    border-width: 1px;
-    border-bottom: 0px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-color: white;
-    height: 15px;
-    width: 98px
+    width: 395px;
+    display: inline-block;
+    white-space:nowrap;
+    overflow-y: hidden;
 }
 
-catF {
-   
-    height: 500px;
+categories>* {    
+    margin-right: 2px;
+    display: inline-block;
+    overflow:hidden;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-style: none;
+    border-right-style: outset;
+    border-width: 1px;
+    border-color: #979797;
+    height: 25px;
+    min-width: 98px;
+    font-size: 150%;
+    text-align:center;
+    font-weight: bold;
+    background-color: #111111;
+
 }
 
 body {
@@ -67,15 +70,16 @@ body {
 }
 
 event {
+    margin-top: 2px;
     display: table;
-    border-style: inset;
+    border-style:none;
     width: 397px;
     height: 15px;
-    border-radius: 5px;
     border-width: 1px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-    border-color: white;
+    border-top-style:outset;
+    border-color: #303030;
+    background-color: rgb(10, 10, 10);
+    font-size: 125%;
 }
 
 NewWindow {
