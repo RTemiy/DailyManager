@@ -33,6 +33,8 @@ function Refresh(lastusedcategory) {
     for (var x = 0; x < Events.length; x++) {
         let e = document.createElement('event');
         e.innerHTML = Events[x].beginningDate + ' | <p>' + Events[x].text;
+        e.setAttribute('number',x);
+        e.setAttribute('onclick',`DeleteEvent(${x})`);
         document.getElementById(Events[x].category+'F').appendChild(e);
     }
 }
@@ -128,6 +130,17 @@ function LoadData(){
     Events=JSON.parse(localStorage.getItem('Events'));
     AllCategories=JSON.parse(localStorage.getItem('Categories'));
     Refresh();
+}
+
+function EventManager(o){
+
+}
+
+function DeleteEvent(o){
+    if (confirm(`Удалить событие? — ${Events[o].text}`)){
+        Events.splice(o,1);
+        Refresh();
+    }
 }
 
 NewButton.addEventListener('click', CreateEvent, false);
