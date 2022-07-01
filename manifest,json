@@ -1,4 +1,3 @@
-
 {
     "short_name": "DM",
     "name": "Daily Manager",
@@ -9,7 +8,7 @@
         "sizes": "240x240"
       }
     ],
-    "start_url": "index.html",
+    "start_url": "https://rtemiy.github.io/DailyManager/index.html",
     "background_color": "black",
     "display": "standalone",
     "scope": "/",

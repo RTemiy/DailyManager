@@ -22,9 +22,9 @@ toolbar {
 toolbar>* {
     display: inline-table;
     background-color: #262626;
-    height: 40px;
-    width: 40px;
-    font-size: 175%;
+    height: 45px;
+    width: 45px;
+    font-size: 225%;
     text-align: center;
 }
 
