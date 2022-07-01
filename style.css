@@ -1,5 +1,5 @@
 *{
-    overflow: auto;
+    overflow:hidden;
 }
 
 mf {
@@ -24,7 +24,7 @@ toolbar>* {
     background-color: #262626;
     height: 40px;
     width: 40px;
-    font-size: 150%;
+    font-size: 175%;
     text-align: center;
 }
 
@@ -34,6 +34,7 @@ categories{
     display: inline-block;
     white-space:nowrap;
     overflow-y: hidden;
+    overflow-x: unset;
 }
 
 categories>* {    
@@ -93,4 +94,5 @@ NewWindow {
     height: 400px;
     width: 250px;
     background-color: black;
+    font-size: 125%;
 }

@@ -46,12 +46,13 @@ var AllCategories = [];
 function CreateEvent() {
     var m = document.createElement('NewWindow');
     var ih = document.createElement('p');
-    ih.textContent = 'Введите текст';
+    ih.textContent = 'Введите текст:';
     m.appendChild(ih);
     var it = document.createElement('input');
     m.appendChild(it);
+    m.appendChild(document.createElement('hr'));
     var ch = document.createElement('p');
-    ch.textContent = 'Выберите категорию';
+    ch.textContent = 'Выберите категорию: ';
     m.appendChild(ch);
     var ic = document.createElement('select');
     for(var x=0;x<AllCategories.length;x++){
@@ -61,7 +62,7 @@ function CreateEvent() {
         ic.appendChild(u);
     }
     m.appendChild(ic);
-    m.appendChild(document.createElement('p'));
+    m.appendChild(document.createElement('hr'));
     var ok = document.createElement('button');
     ok.textContent = 'Создать';
     m.appendChild(ok);
@@ -83,11 +84,11 @@ function CreateEvent() {
 function CreateCategory() {
     var m = document.createElement('NewWindow');
     var ih = document.createElement('p');
-    ih.textContent = 'Введите название категории';
+    ih.innerHTML = 'Введите название категории:';
     m.appendChild(ih);
     var it = document.createElement('input');
     m.appendChild(it);
-    m.appendChild(document.createElement('p'));
+    m.appendChild(document.createElement('hr'));
     var ok = document.createElement('button');
     ok.textContent = 'Создать';
     m.appendChild(ok);
