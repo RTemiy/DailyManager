@@ -48,7 +48,7 @@ var AllCategories = [];
 function CreateEvent() {
     let m = document.createElement('NewWindow');
     let ih = document.createElement('p');
-    ih.textContent = 'Введите текст:';
+    ih.textContent = 'Введите текст нового события:';
     m.appendChild(ih);
     let it = document.createElement('input');
     m.appendChild(it);
@@ -86,7 +86,7 @@ function CreateEvent() {
 function CreateCategory() {
     let m = document.createElement('NewWindow');
     let ih = document.createElement('p');
-    ih.innerHTML = 'Введите название категории:';
+    ih.innerHTML = 'Введите название новой категории:';
     m.appendChild(ih);
     let it = document.createElement('input');
     m.appendChild(it);
