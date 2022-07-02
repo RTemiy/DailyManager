@@ -1,10 +1,8 @@
 const MF = document.getElementById('mf');
 const Toolbar = document.getElementById('toolbar');
-const SaveButton = document.getElementById('save');
 const NewButton = document.getElementById('new');
 const NewCategory = document.getElementById('ncat');
 const OpenCategory = document.getElementById('op');
-const LoadButton = document.getElementById('load');
 const Categories = document.getElementById('categories');
 const CategoriesField = document.getElementById('catF');
 
@@ -38,6 +36,7 @@ function Refresh(lastusedcategory) {
         e.setAttribute('onclick', `EventManager(${x})`);
         document.getElementById(Events[x].category + 'F').appendChild(e);
     }
+    SaveData();
 }
 
 var Events = [];
@@ -113,13 +112,13 @@ function ShowThisCategory(a) {
     let c = Categories.childNodes;
     for (let x = 0; x < b.length; x++) {
         if (b[x].id != a + 'F') {
-            c[x].setAttribute('style', 'color:grey; background-color:black;');
-            b[x].setAttribute('style', 'color:grey; background-color:black;');
+            c[x].setAttribute('style', 'color:grey; background-color:rgba(255, 255, 255, 0.1);');
+            b[x].setAttribute('style', 'color:grey; background-color:rgba(255, 255, 255, 0.1);');
             b[x].hidden = true;
         }
         else {
-            b[x].setAttribute('style', 'color:white; background-color:grey;');
-            c[x].setAttribute('style', 'color:white; background-color:grey;');
+            b[x].setAttribute('style', 'color:white; background-color:black;');
+            c[x].setAttribute('style', 'color:white; background-color:black;');
             b[x].hidden = false;
         }
     };
@@ -133,7 +132,6 @@ function SaveData() {
 function LoadData() {
     Events = JSON.parse(localStorage.getItem('Events'));
     AllCategories = JSON.parse(localStorage.getItem('Categories'));
-    Refresh();
 }
 
 function EventManager(o) {
@@ -182,7 +180,7 @@ function DeleteCategory(gg) {
 NewButton.addEventListener('click', CreateEvent, false);
 NewCategory.addEventListener('click', CreateCategory, false);
 OpenCategory.addEventListener('click', Refresh, false);
-SaveButton.addEventListener('click', SaveData, false);
-LoadButton.addEventListener('click', LoadData, false);
 
+LoadData();
 Refresh();
+

@@ -75,6 +75,7 @@ mf {
     max-height: 800px;
     max-width: 400px;
     margin:0px;
+    background-color: black;
 }
 
 toolbar {
@@ -108,7 +109,7 @@ categories {
     white-space: nowrap;
     overflow-y: hidden;
     overflow-x: unset;
-    background-color: grey;
+    background-color: black;
 }
 
 categories>* {
@@ -135,7 +136,7 @@ b{
 }
 
 catF{
-    background-color: grey;
+    background-color: black;
 }
 
 event {
@@ -144,7 +145,7 @@ event {
     width: 397px;
     height: 15px;
     border-width: 1px;
-    border-top-style: outset;
+    border-bottom-style: solid;
     border-color: #303030;
     font-size: 125%;
     cursor: pointer;
