@@ -69,6 +69,7 @@ input:focus {
 }
 
 mf {
+    overflow-y: auto;
     display: block;
     border-style: solid;
     border-width: 1px;
@@ -78,15 +79,19 @@ mf {
 }
 
 toolbar {
+    top: 0px;
+    position: sticky;
     display: inline-table;
     width: 400px;
     border-width: 0px;
     border-bottom-color: #262626;
     border-bottom-width: 1px;
     border-style: inset;
+    background-color: #000000;
 }
 
 toolbar>* {
+    cursor: pointer;
     display: inline-table;
     background-color: #262626;
     height: 45px;
@@ -96,12 +101,15 @@ toolbar>* {
 }
 
 categories {
+    top: 45px;
+    position: sticky;
     margin-top: 5px;
     width: 395px;
     display: inline-block;
     white-space: nowrap;
     overflow-y: hidden;
     overflow-x: unset;
+    background-color: #000000;
 }
 
 categories>* {
@@ -118,7 +126,11 @@ categories>* {
     text-align: center;
     font-weight: bold;
     background-color: #111111;
+    cursor: pointer;
+}
 
+catF{
+    
 }
 
 event {
@@ -132,6 +144,7 @@ event {
     border-color: #303030;
     background-color: rgb(10, 10, 10);
     font-size: 125%;
+    cursor: pointer;
 }
 
 NewWindow {

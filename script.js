@@ -3,6 +3,7 @@ const Toolbar = document.getElementById('toolbar');
 const SaveButton = document.getElementById('save');
 const NewButton = document.getElementById('new');
 const NewCategory = document.getElementById('ncat');
+const DelCategory = document.getElementById('de');
 const LoadButton = document.getElementById('load');
 const Categories = document.getElementById('categories');
 const CategoriesField = document.getElementById('catF');
@@ -157,9 +158,57 @@ function EventManager(o) {
     MF.appendChild(m);
 }
 
+function DeleteCategory() {
+    let m = document.createElement('NewWindow');
+    let ih = document.createElement('p');
+    ih.innerHTML = 'Выберите категорию для удаления:';
+    m.appendChild(ih);
+    let ic = document.createElement('select');
+    for (let x = 0; x < AllCategories.length; x++) {
+        let u = document.createElement('option');
+        u.innerText = AllCategories[x];
+        u.value = AllCategories[x];
+        ic.appendChild(u);
+    }
+    m.appendChild(ic);
+
+    let ok = document.createElement('button');
+    ok.textContent = 'Удалить';
+    m.appendChild(ok);
+    ok.addEventListener('click', function () {
+        for (let b = 0; b < Events.length;) {
+            if (Events[b].category == ic.value) {
+                Events.splice(b, 1);
+                b=-1;
+            }
+            b++;
+        }
+        for (let x = 0; x < AllCategories.length;) {
+            if (AllCategories[x] == ic.value) {
+                AllCategories.splice(x, 1);    
+                x=-1;            
+            }
+            x++;
+        }
+    
+        Refresh();
+        m.remove();
+    });
+
+    let cancel = document.createElement('button');
+    cancel.textContent = 'Отменить';
+    m.appendChild(cancel);
+    cancel.addEventListener('click', function () {
+        m.remove();
+    });
+
+    MF.appendChild(m);
+}
+
 
 NewButton.addEventListener('click', CreateEvent, false);
 NewCategory.addEventListener('click', CreateCategory, false);
+DelCategory.addEventListener('click', DeleteCategory, false);
 SaveButton.addEventListener('click', SaveData, false);
 LoadButton.addEventListener('click', LoadData, false);
 
