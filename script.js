@@ -21,7 +21,7 @@ function Refresh(lastusedcategory) {
 
     for (let x = 0; x < AllCategories.length; x++) {
         let a = document.createElement('div');
-        a.innerHTML = AllCategories[x] + `<b onclick='DeleteCategory("${AllCategories[x]}")'>⠀❌</b>`;
+        a.innerHTML = AllCategories[x] + `<b onclick='DeleteCategory("${AllCategories[x]}")'>⠀⠀❌</b>`;
         a.setAttribute('id', AllCategories[x]);
         a.setAttribute('onclick', `ShowThisCategory('${AllCategories[x]}')`);
         let b = document.createElement('div');
