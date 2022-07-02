@@ -3,6 +3,7 @@ const Toolbar = document.getElementById('toolbar');
 const SaveButton = document.getElementById('save');
 const NewButton = document.getElementById('new');
 const NewCategory = document.getElementById('ncat');
+const OpenCategory = document.getElementById('op');
 const DelCategory = document.getElementById('de');
 const LoadButton = document.getElementById('load');
 const Categories = document.getElementById('categories');
@@ -208,6 +209,7 @@ function DeleteCategory() {
 
 NewButton.addEventListener('click', CreateEvent, false);
 NewCategory.addEventListener('click', CreateCategory, false);
+OpenCategory.addEventListener('click', Refresh, false);
 DelCategory.addEventListener('click', DeleteCategory, false);
 SaveButton.addEventListener('click', SaveData, false);
 LoadButton.addEventListener('click', LoadData, false);
