@@ -108,7 +108,7 @@ categories {
     white-space: nowrap;
     overflow-y: hidden;
     overflow-x: unset;
-    background-color: #000000;
+    background-color: grey;
 }
 
 categories>* {
@@ -128,8 +128,14 @@ categories>* {
     cursor: pointer;
 }
 
+b{
+    color: red;
+    font-size: 80%;
+    float: right;
+}
+
 catF{
-    
+    background-color: grey;
 }
 
 event {
@@ -141,7 +147,6 @@ event {
     border-width: 1px;
     border-top-style: outset;
     border-color: #303030;
-    background-color: rgb(10, 10, 10);
     font-size: 125%;
     cursor: pointer;
 }

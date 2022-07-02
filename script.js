@@ -4,7 +4,6 @@ const SaveButton = document.getElementById('save');
 const NewButton = document.getElementById('new');
 const NewCategory = document.getElementById('ncat');
 const OpenCategory = document.getElementById('op');
-const DelCategory = document.getElementById('de');
 const LoadButton = document.getElementById('load');
 const Categories = document.getElementById('categories');
 const CategoriesField = document.getElementById('catF');
@@ -24,7 +23,7 @@ function Refresh(lastusedcategory) {
 
     for (let x = 0; x < AllCategories.length; x++) {
         let a = document.createElement('div');
-        a.textContent = AllCategories[x];
+        a.innerHTML = AllCategories[x] + `<b onclick='DeleteCategory("${AllCategories[x]}")'>⠀❌</b>`;
         a.setAttribute('id', AllCategories[x]);
         a.setAttribute('onclick', `ShowThisCategory('${AllCategories[x]}')`);
         let b = document.createElement('div');
@@ -114,11 +113,13 @@ function ShowThisCategory(a) {
     let c = Categories.childNodes;
     for (let x = 0; x < b.length; x++) {
         if (b[x].id != a + 'F') {
-            c[x].setAttribute('style', 'color:grey;');
+            c[x].setAttribute('style', 'color:grey; background-color:black;');
+            b[x].setAttribute('style', 'color:grey; background-color:black;');
             b[x].hidden = true;
         }
         else {
-            c[x].setAttribute('style', 'color:white;');
+            b[x].setAttribute('style', 'color:white; background-color:grey;');
+            c[x].setAttribute('style', 'color:white; background-color:grey;');
             b[x].hidden = false;
         }
     };
@@ -159,58 +160,28 @@ function EventManager(o) {
     MF.appendChild(m);
 }
 
-function DeleteCategory() {
-    let m = document.createElement('NewWindow');
-    let ih = document.createElement('p');
-    ih.innerHTML = 'Выберите категорию для удаления:';
-    m.appendChild(ih);
-    let ic = document.createElement('select');
-    for (let x = 0; x < AllCategories.length; x++) {
-        let u = document.createElement('option');
-        u.innerText = AllCategories[x];
-        u.value = AllCategories[x];
-        ic.appendChild(u);
-    }
-    m.appendChild(ic);
-
-    let ok = document.createElement('button');
-    ok.textContent = 'Удалить';
-    m.appendChild(ok);
-    ok.addEventListener('click', function () {
+function DeleteCategory(gg) {
         for (let b = 0; b < Events.length;) {
-            if (Events[b].category == ic.value) {
+            if (Events[b].category == gg) {
                 Events.splice(b, 1);
-                b=-1;
+                b = -1;
             }
             b++;
         }
         for (let x = 0; x < AllCategories.length;) {
-            if (AllCategories[x] == ic.value) {
-                AllCategories.splice(x, 1);    
-                x=-1;            
+            if (AllCategories[x] == gg) {
+                AllCategories.splice(x, 1);
+                x = -1;
             }
             x++;
         }
-    
         Refresh();
-        m.remove();
-    });
-
-    let cancel = document.createElement('button');
-    cancel.textContent = 'Отменить';
-    m.appendChild(cancel);
-    cancel.addEventListener('click', function () {
-        m.remove();
-    });
-
-    MF.appendChild(m);
 }
 
 
 NewButton.addEventListener('click', CreateEvent, false);
 NewCategory.addEventListener('click', CreateCategory, false);
 OpenCategory.addEventListener('click', Refresh, false);
-DelCategory.addEventListener('click', DeleteCategory, false);
 SaveButton.addEventListener('click', SaveData, false);
 LoadButton.addEventListener('click', LoadData, false);
 
