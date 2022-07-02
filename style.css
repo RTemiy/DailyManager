@@ -77,7 +77,8 @@ mf {
     border-width: 1px;
     border-color: #262626;
     height: 500px;
-    width: 400px
+    width: 400px;
+    margin:0px;
 }
 
 toolbar {
