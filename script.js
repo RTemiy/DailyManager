@@ -21,7 +21,7 @@ function Refresh(lastusedcategory) {
 
     for (let x = 0; x < AllCategories.length; x++) {
         let a = document.createElement('div');
-        a.innerHTML = AllCategories[x] + `<b onclick='DeleteCategory("${AllCategories[x]}")'>⠀⠀❌</b>`;
+        a.innerHTML = AllCategories[x] + `<b onclick='DeleteCategory("${AllCategories[x]}")'>×</b>`;
         a.setAttribute('id', AllCategories[x]);
         a.setAttribute('onclick', `ShowThisCategory('${AllCategories[x]}')`);
         let b = document.createElement('div');
@@ -31,9 +31,7 @@ function Refresh(lastusedcategory) {
     }
     for (let x = 0; x < Events.length; x++) {
         let e = document.createElement('event');
-        e.innerHTML = Events[x].beginningDate + ' | <p>' + Events[x].text;
-        e.setAttribute('number', x);
-        e.setAttribute('onclick', `EventManager(${x})`);
+        e.innerHTML = '' + Events[x].text+`<b onclick='DeleteEvent("${x}")'>×</b>`;
         document.getElementById(Events[x].category + 'F').appendChild(e);
     }
     SaveData();
@@ -173,6 +171,11 @@ function DeleteCategory(gg) {
             }
             x++;
         }
+        Refresh();
+}
+
+function DeleteEvent(ev){
+    Events.splice(ev, 1);
         Refresh();
 }
 

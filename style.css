@@ -130,9 +130,14 @@ categories>* {
 }
 
 b{
-    color: red;
-    font-size: 45%;
+    color: rgba(128, 128, 128, 0.541);
+    font-size: 60%;
     float: right;
+    border: solid 1px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    margin-left: 15px;
 }
 
 catF{
